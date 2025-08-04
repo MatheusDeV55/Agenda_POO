@@ -21,14 +21,18 @@ class Contato:
 
     @staticmethod
     def from_dict(dados):
-        contato = Contato(
-            dados["nome"],
-            dados["telefone"],
-            dados["email"],
-            dados["categoria"]
-        )
-        contato.id = dados["id"]
-        if dados["id"] >= Contato.contador_id:
-            Contato.contador_id = dados["id"] + 1
-        return contato
+        try:
+            contato = Contato(
+                dados["nome"],
+                dados["telefone"],
+                dados["email"],
+                dados["categoria"]
+            )
+            contato.id = dados["id"]
+            if dados["id"] >= Contato.contador_id:
+                Contato.contador_id = dados["id"] + 1
+            return contato
+        except KeyError as e:
+            print(f"Dados incompletos ao carregar contato: {e}")
+            return None
     

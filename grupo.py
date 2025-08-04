@@ -8,9 +8,9 @@ class Grupo:
 
     def adicionar_contato(self, contato):
         self.contatos.append(contato)
-
-    def remover_contato(self, nome):
-        self.contatos = [c for c in self.contatos if c.nome != nome]
+    
+    def remover_contato(self, contato_id):
+        self.contatos = [c for c in self.contatos if c.id != contato_id]
 
     def listar_contatos(self):
         return self.contatos
@@ -25,6 +25,9 @@ class Grupo:
     def from_dict(dados):
         grupo = Grupo(dados["nome"])
         for c in dados["contatos"]:
-            grupo.adicionar_contato(Contato.from_dict(c))
+#            grupo.adicionar_contato(Contato.from_dict(c))
+            contato = Contato.from_dict(c)
+            if contato:
+                grupo.adicionar_contato(contato)
         return grupo
     
