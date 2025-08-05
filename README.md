@@ -1,6 +1,6 @@
 # Agenda de Contatos
 
-Esse pequeno sistema funciona como uma agenda, onde podemos adicionar, modificar e excluir contatos (número e nome) de pessoas específicas ou grupos. Uma lista é criada quando adicionamos os contatos e a cada contato adicionado a lista aumenta.
+Esse pequeno sistema funciona como uma agenda, onde podemos adicionar, modificar e excluir contatos (número e nome) de pessoas específicas ou grupos. Uma lista é criada quando adicionamos os contatos e a cada contato adicionado a lista aumenta. O programa conta também com uma funcionalidade que permite que vejamos o contato na tela assim que ele é criado.
 
 ## Funcionalidades
 
